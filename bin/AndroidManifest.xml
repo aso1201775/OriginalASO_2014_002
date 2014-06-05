@@ -21,7 +21,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android="jp.ac.st.asojuku.original2014002.HitokotoActivity" android:label="@string/app_name"></activity></application>
+            <activity android:name="jp.ac.st.asojuku.original2014002.HitokotoActivity" android:label="@string/app_name"></activity></activity>
+        <activity android:label="@string/app_name" android:name="jp.ac.st.asojuku.original2014002.HitokotoActivity"></activity></application>
 
 </manifest>
