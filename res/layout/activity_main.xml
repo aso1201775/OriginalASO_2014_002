@@ -36,16 +36,6 @@
         android:layout_marginRight="59dp"
         android:text="登録" />
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="127dp"
-        android:layout_marginRight="32dp"
-        android:layout_toLeftOf="@+id/btn2"
-        android:text="メンテ" />
-
     <EditText
         android:id="@+id/edtText"
         android:layout_width="wrap_content"
@@ -63,5 +53,14 @@
         android:layout_below="@+id/btn2"
         android:layout_marginTop="24dp"
         android:text="一言チェック" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="138dp"
+        android:text="メンテ" />
 
 </RelativeLayout>
