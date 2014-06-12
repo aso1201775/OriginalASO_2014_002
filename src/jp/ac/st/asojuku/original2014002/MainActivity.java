@@ -25,29 +25,35 @@ View.OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO 自動生成されたメソッド・スタブ
+
 		Intent vIntent = null;
 		switch(v.getId()){
-		case R.id.btn1:
+		case R.id.btn1:  //メンテボタンが押された
 			vIntent = new Intent(this,MaintenanceActivity.class);
 			startActivity(vIntent);
 			break;
 
-		case R.id.btn2:
+		case R.id.btn2:  //登録ボタンを押された
 			//エディットテキストから入力内容を取り出す
 			EditText etv = (EditText)findViewById(R.id.edtText);
 			String inputMsg = etv.getText().toString();
-			break;
 
 			if(inputMsg!=null && !inputMsg.isEmpty()){
 				helper.insertHitokoto(sdb, inputMsg);
 			}
 
+			//入力欄をクリア
 			etv.setText("");
 			break;
 
-		case R.id.btn3:
+		case R.id.btn3:  //一言チェックが押された
+
+			//MySQLiteOpenHelperのセレクト一言メソッドを呼び出して一言をランダムに取得
+			String strHitokoto = helper.selectRandomHitokoto(sdb);
 			//エディットテキストから入力内容を取り出す
 			vIntent = new Intent(this,HitokotoActivity.class);
+			//インテントに一言を混入
+			vIntent.putExtra("hitokoto", strHitokoto);
 			startActivity(vIntent);
 			break;
 			}
