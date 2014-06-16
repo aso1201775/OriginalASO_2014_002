@@ -29,7 +29,7 @@ View.OnClickListener {
 		Intent vIntent = null;
 		switch(v.getId()){
 		case R.id.btn1:  //メンテボタンが押された
-			vIntent = new Intent(this,MaintenanceActivity.class);
+			vIntent = new Intent(MainActivity.this,MaintenanceActivity.class);
 			startActivity(vIntent);
 			break;
 
