@@ -6,9 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 public class MaintenanceActivity extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener{
 
@@ -50,6 +52,19 @@ public class MaintenanceActivity extends Activity implements View.OnClickListene
 		this.setDBvaluetoList(lstHitokoto);
 	}
 
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+
+	}
 
 	/**
 	 * 引数のListViewにDBのデータをセット
