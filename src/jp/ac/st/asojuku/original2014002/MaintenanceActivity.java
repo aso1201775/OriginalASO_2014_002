@@ -59,7 +59,7 @@ public class MaintenanceActivity extends Activity implements View.OnClickListene
 		// TODO 自動生成されたメソッド・スタブ
 
 		//前に選択中の行があれば、背景色を透明にする
-		if(this.selectdID!=1){
+		if(this.selectdID!=-1){
 			parent.getChildAt(this.lastPosition).setBackgroundColor(0);
 		}
 		//選択中の行の背景色をグレーにする
@@ -81,7 +81,7 @@ public class MaintenanceActivity extends Activity implements View.OnClickListene
 			case R.id.button2:
 
 				//選択行があれば
-				if(this.selectdID !=1){
+				if(this.selectdID !=-1){
 					this.deleteFromHitokoto(this.selectdID);
 					ListView lstHitokoto = (ListView)findViewById(R.id.listView1);
 					//ListViewにDBをセット
@@ -92,7 +92,7 @@ public class MaintenanceActivity extends Activity implements View.OnClickListene
 				}
 				else{
 					//なければ、トースト(簡易メッセージ)を表示
-					Toast.makeText(MaintenanceActivity.this, "削除する行を選んでください", Toast.LENGTH_SHORT).show();
+					Toast.makeText(MaintenanceActivity.this, "削除する行を選んでください★", Toast.LENGTH_SHORT).show();
 
 				}
 				break;
